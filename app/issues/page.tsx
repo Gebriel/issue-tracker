@@ -46,4 +46,7 @@ const IssuesPage = async () => {
     );
 };
 
+export const dynamic = 'force-dynamic';
+//export const revalidate = 60; //revalidate every 60 seconds
+
 export default IssuesPage;
