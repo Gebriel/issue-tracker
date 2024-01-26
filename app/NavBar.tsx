@@ -1,5 +1,7 @@
 'use client';
 
+import { Skeleton } from '@/app/components';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -51,6 +53,7 @@ const NavBar = () => {
                         </ul>
                     </Flex>
                     <Box>
+                        {status === 'loading' && <Skeleton width="3rem" />}
                         {status === 'authenticated' && (
                             <DropdownMenu.Root>
                                 <DropdownMenu.Trigger>
